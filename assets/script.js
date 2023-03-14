@@ -5,7 +5,7 @@ var searchHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
 // Function to display the current weather conditions
 function displayCurrentWeather(city) {
   var queryURL =
-    "https://api.openweathermap.org/data/2.5/weather?q=" +
+    "https://api.openweathermap.org/data/2.5/weather?q=" + 
     city +
     "&appid=" +
     APIKey +
@@ -179,6 +179,58 @@ function handleFormSubmit(event) {
         `;
       }
     })
+    
+
+ // Store user input and weather data in local storage
+ function storeData(country, weatherData) {
+  // Get existing data from local storage
+  var storedData = JSON.parse(localStorage.getItem("storedData")) || {};
+  
+  // Add new data to stored data object
+  storedData[country] = weatherData;
+  
+  // Store updated data object in local storage
+  localStorage.setItem("storedData", JSON.stringify(storedData));
+ }
+    // Retrieve stored data and display it
+ function displayStoredData() {
+  // Get stored data from local storage
+  var storedData = JSON.parse(localStorage.getItem("storedData")) || {};
+  
+  // Loop through stored data and display it
+  for (var country in storedData) {
+    if (storedData.hasOwnProperty(country)) {
+      var weatherData = storedData[country];
+      
+      // Create and append HTML elements to display stored data
+      var countryEl = $("<h3>").text(country);
+      var tempEl = $("<p>").text("Temp: " + weatherData.temperature + " °C");
+      var humidityEl = $("<p>").text("Humidity: " + weatherData.humidity + "%");
+      
+      $("#stored-data").append(countryEl, tempEl, humidityEl);
+    }
+  }
+}
+
+ // Handle form submission
+ $("#search-form").submit(function(event) {
+  event.preventDefault();
+  
+  // Get user input
+  var country = $("#country-input").val();
+  
+  // Call API to get weather data
+  displayForecast(country, function(weatherData) {
+    // Store user input and weather data in local storage
+    storeData(country, weatherData);
+    
+    // Display weather data
+    displayWeatherData(weatherData);
+  });
+});
+
+// Display stored data when page loads
+displayStoredData();
 
 }    
 

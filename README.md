@@ -1,12 +1,5 @@
-# PROJECT NAME
-​
-[comment]: <> (This is only a template, feel free to add your own touch!)
-​
-![](https://img.shields.io/badge/html-HTML5-orange?logo=html5)
-![](https://img.shields.io/badge/css-CSS3-%231572B6?logo=css3)
-​
-[comment]: <> (if you want to add more badges go to https://shields.io/)
-​
+# Weather Dashboard
+​​
 ## �� TABLE OF CONTENT
 ​
 - [Description](#-description)
@@ -21,78 +14,73 @@
 ​
 ### �� What is it about?
 ​
-[comment]: <> (what? why? your motivation for the project? what problem does it solve?)
+This is weather dashboard whcih uses server api's to pull weather data of a specfic country that the user searches for. This dashboard searches for several weather conditions on the day and gives a 5 day weather forecast.
 ​
 ## �� USAGE
 ​
-[**>> Visit my portfolio website <<**](insert the link here)
+[**>> Visit my portfolio website <<**](https://github.com/khans0/)
 ​
 ### �� User story
 ​
 ```
-As a...,
-I WANT to ...
-SO THAT I can ...
+AS A traveler
+I WANT to see the weather outlook for multiple cities
+SO THAT I can plan a trip accordingly
 ```
-​
-[comment]: <> (feel free to complete the list)
-​
-```
-GIVEN the ...
-​
-WHEN
-THEN
-​
-WHEN
-THEN
-​
-WHEN
-THEN
+
 ​
 ```
+GIVEN the traveler 
 ​
-[comment]: <> (feel free to complete the list)
+WHEN the user searches for a city they are presented with 
+THEN the current and future weather conditions for that city are shown with the name, date, icon temperature, humidity and wind speed.
+​
+WHEN the user views the weather conditions 
+THEN they are presented with the 5 day forcast.
+​
+WHEN the user clicks on the search history 
+THEN they are presented with current and future conditions for that city. 
+​
+```
+​
+=
 ​
 ### ✅ Acceptance Criteria
 ​
 It's done when:
 ​
-- [ ]
-- [ ]
-- [ ]
-- [ ]
-- [ ] [comment]: <> (feel free to complete the list)
+- [ ]the user searches for a city they are presented with the current and future weather conditions for that city
+- [ ] WHEN the user views the weather conditions they are presented with the 5 day forcast
 ​
 ## �� MOCK-UP
 ​
-[comment]: <> (e.g The following image shows the web application's requirements in terms of appearance and functionality:)
+The following image shows the web application's requirements in terms of appearance and functionality:
 ​
-[comment]: <> ( to insert an image, write: ![alt text](./path/to-the-img.png))
-​
-[comment]: <> (if website is responsive insert images for different viewports or add > **Note**: This layout is designed for desktop viewing.)
+![Screenshot of deployed site](./assets/images/Weather%20Dashboard%20-.png)
 ​
 ## �� TECHNOLOGY USED
 ​
 - HTML
 - CSS
-  [comment]: <> (feel free to complete the list)
+- API 
+- Javascript
 ​
 ### �� What I've learnt
 ​
-[comment]: <> (e.g. CSS variables provides more readability to the code etc...)
+I have learnt how to change the css through javascript 
 ​
 ### ➕ Suggestions for improvement
 ​
-[comment]: <> ( e.g. create a dark mode version of the website)
+Allow the users to search for specfic areas and search for weather within by postcode. 
 ​
 ## �� INSTALLATION
 ​
-[comment]: <> (No installation needed OR Provide step-by-step description of how to get the development environment running.)
+N/A
 ​
 ## �� CREDITS
 ​
-[comment]: <> (List your collaborators, if any, with links to their GitHub profiles. // If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section. // If you followed tutorials, include links to those here as well.)
+N/A
 ​
 ## �� LICENSE
 ​
-[comment]: <> (e.g. This repository is licensed under the MIT license.)
+N/A
